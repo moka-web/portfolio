@@ -1,15 +1,21 @@
 body {
-  background-color: #1e1f21; }
+  background-color: #FF8000; }
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  margin-left: 5%;
-  margin-right: 5%; }
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #2b2d30;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 #FF8000; }
   .navbar span {
     padding-top: 2vh;
-    color: whitesmoke;
-    font-family: 'Inter', sans-serif;
+    color: #FF8000;
+    font-family: 'Open Sans', sans-serif;
     font-size: 2vw; }
   .navbar ul {
     display: flex;
@@ -19,34 +25,48 @@ body {
       list-style: none; }
       .navbar ul li a {
         text-decoration: none;
-        color: whitesmoke;
-        font-family: 'Inter', sans-serif;
-        font-size: 1.5vw; }
+        color: #FF8000; }
+        .navbar ul li a svg {
+          width: 2vw; }
 
 .presentation {
   width: 100%;
   height: 100vh;
-  padding-top: 10vh; }
-  .presentation div {
+  padding-top: 10vh;
+  display: flex; }
+  .presentation .svg-code {
+    color: #15171a;
+    width: 50vw;
+    position: absolute;
+    left: 10vw;
+    bottom: 0;
+    z-index: -2; }
+  .presentation .contenedor_presentacion {
     border-radius: 10px;
     display: flex;
-    justify-content: space-around;
-    margin: 5%;
-    background-color: #2b2d30;
-    height: 60%; }
-  .presentation .img_presentation {
-    width: 50%; }
+    justify-content: start;
+    margin-left: 41%;
+    margin-top: 10vh;
+    background: rgba(255, 128, 0, 0.66);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 100%;
+    height: 55%;
+    box-shadow: 0 4px 8px 0 #FF8000; }
   .presentation .presentation_title {
     color: whitesmoke;
     display: flex;
     flex-direction: column;
-    width: 50%; }
+    padding: 5%;
+    box-shadow: none; }
     .presentation .presentation_title h2 {
-      font-family: 'Inter', sans-serif;
-      font-size: 3vw; }
+      font-family: 'Open Sans', sans-serif;
+      font-size: 4vw;
+      color: #2e2b30; }
     .presentation .presentation_title p {
       width: 100%;
-      color: #b3b323;
+      color: #2e2b30;
       font-family: 'Inter', sans-serif; }
 
 .skills {
@@ -56,6 +76,7 @@ body {
     display: flex;
     justify-content: space-between; }
     .skills .skills_container article {
+      box-shadow: 0 4px 8px 0 #FF8000;
       background-color: #2b2d30;
       border-radius: 10px;
       padding: 5%;
@@ -67,15 +88,24 @@ body {
 .projects .projects_container {
   background-color: #2b2d30;
   margin: 5%;
+  padding: 5%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-direction: column; }
   .projects .projects_container article {
-    height: 33vh;
-    margin: 5%;
-    width: 30%; }
+    display: flex;
+    height: 40vh;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 100%; }
     .projects .projects_container article p {
-      font-family: 'Inter', sans-serif; }
+      padding-left: 10%;
+      padding-right: 10%;
+      font-family: 'Inter', sans-serif;
+      color: whitesmoke;
+      width: 50%; }
+    .projects .projects_container article img {
+      width: 50%; }
 
 .certificaciones {
   display: flex; }
